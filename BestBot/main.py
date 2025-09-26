@@ -54,9 +54,11 @@ def wake_up(message):
 
     CHAT_ID = message.chat.id
     BOT_NAME = bot.get_me().first_name
-    bot.send_message(chat_id=CHAT_ID, text=f'{BOT_NAME} активирован!', reply_markup=keyboard)
+    bot.send_message(chat_id=CHAT_ID,
+                     text=f'{BOT_NAME} активирован!',
+                     reply_markup=keyboard)
 
-    
+
 @bot.message_handler(commands=['котика, пожалуйста'])
 def new_cat(message):
     get_new_image(message.chat.id)
@@ -74,11 +76,11 @@ def answer_to_boss(message):
             get_new_image(CHAT_ID)
     if 'сколько времени' in TEXT:
         get_current_time(CHAT_ID)
-        
+
 
 def main():
     bot.polling()
 
 
 if __name__ == '__main__':
-    main() 
+    main()
