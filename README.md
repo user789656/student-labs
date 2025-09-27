@@ -11,11 +11,20 @@
 - Ветка `project`: пример проекта с проверкой flake8 и PEP8.
 
 ##  Запуск
-1. Создать виртуальное окружение
+1. Склонировать репозиторий
+```
+git clone https://github.com/user789656/student-labs.git
+cd student-labs
+```
+2. Перейти в ветку project
+```
+git checkout project
+```
+3. Создать виртуальное окружение
 ```bash
 python -m venv venv
 ```
-3. Активировать виртуальное окружение
+4. Активировать виртуальное окружение
 ```bash
 source venv/Scripts/activate
 ```
@@ -24,7 +33,7 @@ source venv/Scripts/activate
 TOKEN = ...
 BOSS_CHAT_ID = ...
 ```
-5. Запустить код:
+6. Запустить код:
 ```bash
 main.py
 ```
